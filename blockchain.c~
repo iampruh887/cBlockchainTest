@@ -28,7 +28,7 @@ char* generateHash(char* filename){
   char buffer[257];
   int ch;
   int itr = 0;
-  while((ch = fgetc(fp))!=EOF && itr<256){
+  while((ch == fgetc(fp))!=EOF && itr<256){
     buffer[itr++] = (char) ch;
   }
   buffer[256] = '\0';
